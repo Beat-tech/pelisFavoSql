@@ -1,0 +1,171 @@
+html {
+  font-family: "Roboto Mono", monospace;
+}
+body {
+  background-color: white;
+  margin: 0;
+}
+footer {
+  width: 100%;
+  margin: 0;
+  height: 5vh;
+  background-color: rgb(151, 163, 173, 1);
+}
+#h1 {
+  /* display: flex; */
+
+  color: #343c4c;
+  margin-top: 1vh;
+}
+#tit {
+  /* display: flex; */
+
+  color: #343c4c;
+  margin-top: 2vh;
+  margin-left: 1vh;
+  font-size: 30px;
+  font-weight: bolder;
+}
+#titulo {
+  display: flex;
+  flex-direction: row;
+  /* background-color: rgb(190, 165, 165); */
+  margin-left: 200px;
+  border-radius: 6px;
+  width: 77.2vw;
+}
+#imgcamera {
+  width: 72px;
+}
+#boton2 {
+  background-color: rgb(151, 163, 173);
+  border-radius: 6px;
+  font-family: "Roboto Mono", monospace;
+  color: #343c4c;
+  border-style: none;
+  margin-left: 290px;
+  margin-right: 240px;
+  margin-top: -70px;
+  padding: 10px;
+}
+#boton {
+  margin-right: 100px;
+  padding: 10px;
+
+  background-color: lightgray;
+
+  font-family: "Roboto Mono", monospace;
+  color: #343c4c;
+  border-style: none;
+  height: 17px;
+  margin-top: 3vh;
+}
+
+#peticion {
+  border-style: none;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  background-color: lightgray;
+  padding: 10px;
+  width: 480px;
+  margin-top: 3vh;
+}
+#nav {
+  background-color: rgb(151, 163, 173);
+  margin: 0;
+  display: flex;
+  height: 10vh;
+  width: 100vw;
+}
+#div {
+  background-color: rgb(233, 185, 65, 0.7);
+  /* background-color: #ebcb4c; */
+  /* background-color: lightgray; */
+  width: 70vh;
+  text-align: center;
+  padding-bottom: 40px;
+  padding-top: 40px;
+  margin-left: 35vw;
+  margin-top: 2vh;
+  margin-bottom: 2vh;
+}
+
+#botonesmovie {
+  display: flex;
+  flex-direction: row;
+  text-align: center;
+}
+
+#boton3 {
+  border-style: none;
+  /* background-color: rosybrown; */
+  /* background-color: #7484bc; */
+  /* background-color: lightgray; */
+  width: 80px;
+  height: 30px;
+  border-radius: 4px;
+
+  font-family: "Roboto Mono", monospace;
+  /* color: lightgray; */
+  color: #343c4c;
+  display: flex;
+  margin-top: 30px;
+  margin-bottom: 60px;
+  margin-left: 14.5vw;
+}
+
+#id {
+  display: none;
+}
+
+@media only screen and (max-width: 600px) {
+  div#div {
+    margin: 0;
+    margin-left: 0px;
+    margin-top: 0px;
+    width: 100vw;
+    height: 100vh;
+    padding-left: 0px;
+    padding-top: 0.5vh;
+    border-radius: 0px;
+    background-color: lightgray;
+    font-size: smaller;
+  }
+
+  #poster {
+    width: 200px;
+    height: auto;
+  }
+  #titulo {
+    margin-left: 2vw;
+  }
+  h1 {
+    font-size: 15px;
+  }
+  /* h6 {
+    display: none;
+  } */
+  #peticion {
+    width: 120px;
+    height: 24px;
+    margin: auto;
+    margin-top: 20px;
+    margin-left: 30px;
+  }
+  #boton {
+    height: 4px;
+    margin-top: 20px;
+  }
+  #boton2 {
+    margin-left: 30px;
+    font-size: xx-small;
+    margin-top: -7vh;
+  }
+  #tit {
+    font-size: 15px;
+  }
+  #boton3 {
+    margin-left: 195px;
+  }
+}

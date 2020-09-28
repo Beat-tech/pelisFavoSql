@@ -1,0 +1,65 @@
+html(lang='en')
+  head
+    title="MOVIES"
+    link(href="../img/cine.svg" rel="stylesheet")
+    link(rel='shortcut icon', href='../img/cine.svg', type='image/x-icon')
+    link(rel="stylesheet", href="formulario.css")
+  body
+    div#nav
+      div#titulo
+        input(type="image", src="img/ar-camera.png", id="imgcamera")
+        p#tit Pelis favos
+      div#cabecero
+        input(type="text" id="peticion") 
+        br 
+        br
+      div#botones
+        input(type="image", src= "img/lupa.png", id="boton")
+        br
+        br
+        input(type="button", value="Añadir película>>" id="boton2")
+
+    //- h1.titulo Datos de la peli 
+    //-   img(src="img/palomitas-de-maiz.png", id="imgCamara") 
+    form#login(action= rutaPost method="POST")
+      div#data
+        label#label _id
+        input#id(type='text', name= "id", value=id)
+        br
+        br
+        label Título: 
+        input#title(type='text', name= "Title", placeholder='' value=Title required)
+        br
+        br
+        label  Director:
+        input#director(type='text', name= "Director", placeholder='' value=Director required)
+        br
+        br
+        label  Año de estreno:
+        input#year(type='number' min= 1912 max= 2021, name= "Year", placeholder='' value=Year required)
+        br
+        br
+        label  Actores:
+        input#director(type='text', name= "Actores", placeholder='' value=Actors)
+        br
+        br
+        label  Género:
+        input#director(type='text', name= "Genero", placeholder='' value=Genre)
+        br
+        br
+        label  Premios:
+        input#director(type='text', name= "Premios", placeholder='' value=Awards)
+        br
+        br
+        label  Duración:
+        input#director(type='text', name= "Duracion", placeholder='' value=Runtime)
+        br
+        br
+        label  Poster:
+        input#poster(type='img', name= "Poster", placeholder='' src= "" value=Poster)
+        br
+        br
+        input#submit(type='submit' value="Guardar")
+      footer
+    script(src="./script2.js")
+    

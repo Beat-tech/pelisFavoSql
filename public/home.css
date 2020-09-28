@@ -1,0 +1,196 @@
+html {
+  font-family: "Roboto Mono", monospace;
+}
+
+body {
+  background-color: beige;
+  margin: 0;
+}
+h1 {
+  /* display: flex; */
+
+  color: #343c4c;
+  margin-top: 1vh;
+  margin-left: 0.5vw;
+}
+footer {
+  width: 100%;
+  margin: 0;
+  height: 5vh;
+  background-color: rgb(151, 163, 173, 1);
+}
+#data {
+  margin: 200px;
+  margin-top: 5px;
+  margin-bottom: 2vh;
+  background-color: lightgray;
+  /* background-color: rgb(233, 185, 65, 0.7); */
+
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  border-radius: 6px;
+
+  width: 72vw;
+}
+p.enunciados {
+  color: rgb(31, 42, 22);
+}
+#titulo {
+  display: flex;
+  flex-direction: row;
+  /* background-color: rgb(190, 165, 165); */
+  margin-left: 200px;
+  border-radius: 6px;
+  width: 77.2vw;
+}
+#imgcamera {
+  width: 72px;
+}
+
+#boton2 {
+  background-color: rgb(151, 163, 173);
+  border-radius: 6px;
+  font-family: "Roboto Mono", monospace;
+  color: #343c4c;
+  border-style: none;
+  margin-left: 270px;
+  margin-right: 340px;
+  margin-top: -70px;
+  padding: 10px;
+}
+#boton {
+  margin-right: 100px;
+  padding: 10px;
+
+  background-color: lightgray;
+
+  font-family: "Roboto Mono", monospace;
+  color: rgb(31, 42, 22);
+  border-style: none;
+  height: 17px;
+  margin-top: 3vh;
+}
+
+#peticion {
+  border-style: none;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  background-color: lightgrey;
+  padding: 10px;
+  width: 480px;
+  margin-top: 3vh;
+}
+.tarjeta {
+  margin: 50px;
+}
+
+#botonsHome {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+}
+
+#nav {
+  background-color: rgb(151, 163, 173);
+
+  margin: 0;
+  display: flex;
+  height: 10vh;
+  width: 100vw;
+}
+.pelifav {
+  margin: 0;
+  margin-top: 5vh;
+  /* background-color: green; */
+  display: flex;
+  flex-direction: row;
+  padding: 0;
+  width: 15vw;
+  border-style: solid;
+  border-color: #343c4c;
+  border: 60px solid transparent;
+  border-image: url("img/celuloide-01.svg") 22 round;
+}
+
+.pelifav2 {
+  display: flex;
+  flex-direction: column;
+}
+.pelifav3 {
+  /* display: flex;
+  flex-direction: column; */
+  /* margin-right: 10px; */
+  width: 10vw;
+  height: 10vw;
+  margin-right: 1vw;
+}
+
+.poster {
+  width: 7vw;
+  height: auto;
+}
+
+.botonhome {
+  margin-top: 2vh;
+  margin-left: 0.4vw;
+  margin-bottom: 0;
+}
+
+#tot {
+  font-weight: bold;
+}
+
+@media only screen and (max-width: 600px) {
+  div#data {
+    margin: 0;
+    padding-top: 2vh;
+    width: 100vw;
+  }
+  div.pelifav {
+    border-image: url("img/celuloide-01.svg") 22 round;
+
+    margin: 2vw;
+    width: 80vw;
+  }
+
+  /* .transp {
+    display: none;
+  } */
+  .poster {
+    width: 20vw;
+  }
+  .pelifav3 {
+    width: 40vw;
+  }
+  .pelifav2 {
+    margin-left: 10vw;
+  }
+  .botonHome {
+    padding: 2px;
+  }
+
+  #titulo {
+    margin-left: 2vw;
+  }
+  h1 {
+    font-size: 15px;
+  }
+  #peticion {
+    width: 120px;
+    height: 24px;
+    margin: auto;
+    margin-top: 20px;
+    margin-left: 30px;
+  }
+  #boton {
+    height: 4px;
+    margin-top: 20px;
+  }
+  #boton2 {
+    margin-left: 30px;
+    font-size: xx-small;
+    margin-top: -7vh;
+  }
+}

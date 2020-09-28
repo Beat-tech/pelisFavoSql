@@ -1,0 +1,36 @@
+html
+  head
+    title= "Movies"
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono&display=swap" rel="stylesheet">
+    link(rel='shortcut icon', href='../img/cine.svg', type='image/x-icon')
+    link(rel="stylesheet", href="movie.css")
+  body
+    div#nav
+      div#titulo
+        input(type="image", src="img/ar-camera.png", id="imgcamera")
+        p#tit= hache1
+      div#cabecero
+        input(type="text" id="peticion") 
+        br 
+        br
+      div#botones
+        input(type="image", src= "img/lupa.png", id="boton")
+        br
+        br
+        input(type="button", value="Añadir película>>" id="boton2")
+  div#div
+    h1= Title
+    h2= Year
+    h3= Director
+    img(src=Poster id=("Poster"))
+    h4= Actors
+    h5= Awards
+    h6= Genre
+    h7= Runtime
+    p#id= id
+    div#botonesmovie
+    if !id
+      input(type="button", value="Guardar" id="boton3")
+  footer
+     
+    script(type="text/javascript" src="./scriptfavs.js")
