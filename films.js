@@ -63,15 +63,15 @@ exports.edit = (req, res) => {
       res.render("formulario", {
         rutaPost: "/edit",
         hache1: "Pelis favos",
-        id: datos._id,
-        Title: datos.Title,
-        Year: datos.Year,
-        Director: datos.Director,
-        Actors: datos.Actors,
-        Genre: datos.Genre,
-        Awards: datos.Awards,
-        Runtime: datos.Runtime,
-        Poster: datos.Poster,
+        id: datos[0]._id,
+        Title: datos[0].Title,
+        Year: datos[0].Year,
+        Director: datos[0].Director,
+        Actors: datos[0].Actors,
+        Genre: datos[0].Genre,
+        Awards: datos[0].Awards,
+        Runtime: datos[0].Runtime,
+        Poster: datos[0].Poster,
       });
     })
     .catch((e) => console.log(e));
@@ -79,6 +79,9 @@ exports.edit = (req, res) => {
 
 exports.postUpdate = (req, res) => {
   var id = req.body.id;
+  console.log("$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$4");
+  console.log(id);
+  console.log(req.body);
 
   bbdd
     .setMovie(id, req.body)

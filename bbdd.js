@@ -80,26 +80,35 @@ exports.getMovie = async (nombre) => {
 };
 
 // //Modificar Usuario
-// exports.setMovie = async (id) => {
-//   try {
-//     conn = await pool.getConnection();
-//     const res = await conn.query(
-//       `UPDATE favorites
-//       SET (Title, Year, Director, Actors, Awards, Genre, Runtime, Poster)
-//       VALUES
-//              ("${id.Title}","${id.Year}","${id.Director}","${id.Actors}","${id.Awards}","${id.Genre}","${id.Runtime}","${id.Poster}
-//       WHERE _id=(?);`,
-//       [id]
-//     );
-//     console.log(res);
-//     return res;
-//   } catch (err) {
-//     console.log(err);
-//     return null;
-//   } finally {
-//     if (conn) conn.release(); //libera el pool
-//   }
-// };
+exports.setMovie = async (id, film) => {
+  try {
+    conn = await pool.getConnection();
+    const res = await conn.query(
+      `UPDATE favorites
+      SET (Title=(?), Director=(?), Year =(?), Actors=(?), Genre=(?), Awards=(?), Runtime=(?), Poster=(?))
+      WHERE _id=(?);`,
+      [
+        film.Title,
+        film.Director,
+        film.Year,
+        film.Actors,
+        film.Genre,
+        film.Awards,
+        film.Runtime,
+        film.Poster,
+        id,
+      ]
+    );
+    delete res.meta;
+    console.log(res);
+    return res;
+  } catch (err) {
+    console.log(err);
+    return null;
+  } finally {
+    if (conn) conn.release(); //libera el pool
+  }
+};
 // //Borrar Usuario
 exports.deleteMovie = async (nombre) => {
   try {
