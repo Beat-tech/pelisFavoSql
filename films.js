@@ -36,9 +36,6 @@ exports.getDetail = (req, res) => {
   bbdd
     .getMovie(peli)
     .then((datos) => {
-      console.log("vamos a renderizarXXXXXXXXXXXXXXXXXXXXX");
-      console.log(datos);
-
       res.render("movie.pug", {
         hache1: "Pelis favos",
         Title: datos[0].Title,
@@ -79,9 +76,6 @@ exports.edit = (req, res) => {
 
 exports.postUpdate = (req, res) => {
   var id = req.body.id;
-  console.log("$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$4");
-  console.log(id);
-  console.log(req.body);
 
   bbdd
     .setMovie(id, req.body)

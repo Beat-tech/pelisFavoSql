@@ -19,8 +19,6 @@ const connect = () => {
 
 //Crear Usuario
 exports.createMovie = async (peli) => {
-  console.log("peli es **********************************");
-  console.log(peli);
   try {
     conn = await pool.getConnection();
     var res = await conn.query(
@@ -48,8 +46,7 @@ exports.getFilmsDetail = async () => {
        FROM favorites`
     );
     delete res.meta;
-    console.log("todas las pelis++++++++++++++++++++++++++");
-    console.log(res);
+
     return res;
   } catch (err) {
     console.log(err);
@@ -85,8 +82,8 @@ exports.setMovie = async (id, film) => {
     conn = await pool.getConnection();
     const res = await conn.query(
       `UPDATE favorites
-      SET (Title=(?), Director=(?), Year =(?), Actors=(?), Genre=(?), Awards=(?), Runtime=(?), Poster=(?))
-      WHERE _id=(?);`,
+       SET    Title=(?), Director=(?), Year =(?), Actors=(?), Genre=(?), Awards=(?), Runtime=(?), Poster=(?)
+       WHERE _id=(?);`,
       [
         film.Title,
         film.Director,
