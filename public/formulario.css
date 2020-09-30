@@ -10,6 +10,7 @@ h1 {
   /* display: flex; */
 
   color: #343c4c;
+  font-size: 25px;
 }
 footer {
   width: 100%;
@@ -17,15 +18,7 @@ footer {
   height: 5vh;
   background-color: rgb(151, 163, 173, 1);
 }
-#tit {
-  /* display: flex; */
 
-  color: #343c4c;
-  margin-top: 2vh;
-  margin-left: 1vh;
-  font-size: 30px;
-  font-weight: bolder;
-}
 #titulo {
   display: flex;
   flex-direction: row;
@@ -170,9 +163,10 @@ footer {
 
   #titulo {
     margin-left: 2vw;
+    margin-right: 6vw;
   }
   h1 {
-    font-size: 15px;
+    display: none;
   }
   #peticion {
     width: 120px;

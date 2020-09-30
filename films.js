@@ -57,9 +57,9 @@ exports.edit = (req, res) => {
   bbdd
     .getMovie(peli)
     .then((datos) => {
-      res.render("formulario", {
+      res.render("formulario.pug", {
         rutaPost: "/edit",
-        hache1: "Pelis favos",
+        hache1: "¿Qué quieres modificar?",
         id: datos[0]._id,
         Title: datos[0].Title,
         Year: datos[0].Year,
@@ -108,7 +108,10 @@ exports.getfilms = (req, res) => {
     });
 };
 exports.formulario = (req, res) => {
-  res.render("formulario", { rutaPost: "/submit-form" });
+  res.render("formulario", {
+    rutaPost: "/submit-form",
+    hache1: "¿Quieres añadir una peli?",
+  });
 };
 
 // exports.postFormulario = ()

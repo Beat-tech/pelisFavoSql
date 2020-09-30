@@ -10,7 +10,7 @@ html
         img(src="img/ar-camera.png", id="imgcamera")
         h1= hache1
       div#cabecero
-        input(type="text" id="peticion") 
+        input(type="text" id="peticion" required) 
         br 
         br
       div#botones
@@ -34,4 +34,6 @@ html
                 input.botonHome(type="image", src= "img/ojo.png", id='botonD${i}' onclick="detalles('"+film.Title+"')") 
     footer   
     script(src="script.js")
+    
+
     

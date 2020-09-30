@@ -28,10 +28,9 @@ exports.createMovie = async (peli) => {
        VALUES 
               ("${peli.Title}","${peli.Year}","${peli.Director}","${peli.Actors}","${peli.Awards}","${peli.Genre}","${peli.Runtime}","${peli.Poster}")`
     );
-    console.log(res);
+
     return res;
   } catch (err) {
-    console.log(err);
     return null;
   } finally {
     if (conn) conn.release(); //libera el pool
@@ -49,7 +48,6 @@ exports.getFilmsDetail = async () => {
 
     return res;
   } catch (err) {
-    console.log(err);
     return null;
   } finally {
     if (conn) conn.release(); //libera el pool
@@ -69,7 +67,6 @@ exports.getMovie = async (nombre) => {
     delete res.meta;
     return res;
   } catch (err) {
-    console.log(err);
     return null;
   } finally {
     if (conn) conn.release(); //libera el pool
@@ -97,10 +94,9 @@ exports.setMovie = async (id, film) => {
       ]
     );
     delete res.meta;
-    console.log(res);
+
     return res;
   } catch (err) {
-    console.log(err);
     return null;
   } finally {
     if (conn) conn.release(); //libera el pool
@@ -117,10 +113,8 @@ exports.deleteMovie = async (nombre) => {
       [nombre]
     );
     delete res.meta;
-    console.log(res);
     return res;
   } catch (err) {
-    console.log(err);
     return null;
   } finally {
     if (conn) conn.release(); //libera el pool

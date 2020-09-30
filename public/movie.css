@@ -15,15 +15,14 @@ footer {
   /* display: flex; */
 
   color: #343c4c;
-  margin-top: 1vh;
 }
 #tit {
   /* display: flex; */
 
   color: #343c4c;
-  margin-top: 2vh;
+  margin-top: 1vh;
   margin-left: 1vh;
-  font-size: 30px;
+  font-size: 25px;
   font-weight: bolder;
 }
 #titulo {
@@ -139,9 +138,13 @@ footer {
   }
   #titulo {
     margin-left: 2vw;
+    margin-right: 6vw;
   }
   h1 {
     font-size: 15px;
+  }
+  #tit {
+    display: none;
   }
   /* h6 {
     display: none;
