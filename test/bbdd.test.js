@@ -35,38 +35,19 @@ describe("Comprueba el comportamiento de createMovie", () => {
   });
 });
 describe("Comprueba el comportamiento de getMovie", () => {
-  test("Lee una película", () => {
-    let peli = {
-      Title: "Titanic",
-      Director: "James Cameron",
-      Year: 1997,
-      Actors: "Leonardo DiCaprio, Kate Winslet, Billy Zane, Kathy Bates",
-      Genre: "Drama, Romance",
-      Awards: "Won 11 Oscars. Another 113 wins & 83 nominations.",
-      Runtime: "194 min",
-      Poster:
-        "https://m.media-amazon.com/images/M/MV5BMDdmZGU3NDQtY2E5My00ZTliLWIzOTUtMTY4ZGI1YjdiNjk3XkEyXkFqcGdeQXVyNTA4NzY1MzY@._V1_SX300.jpg",
-    };
-
-    return getMovie(peli).then((respuesta) => expect(respuesta).not.toBe(null));
+  test("No encuentra una película", () => {
+    return getMovie("").then((respuesta) => expect(respuesta.length).toBe(0));
+  });
+  test("Encuentra una película", () => {
+    return getMovie("Titanic").then((respuesta) =>
+      expect(respuesta.length).not.toBe(0)
+    );
   });
 });
 
 describe("Comprueba el comportamiento de deleteMovie", () => {
   test("Borra una película", () => {
-    let peli = {
-      Title: "Titanic",
-      Director: "James Cameron",
-      Year: 1997,
-      Actors: "Leonardo DiCaprio, Kate Winslet, Billy Zane, Kathy Bates",
-      Genre: "Drama, Romance",
-      Awards: "Won 11 Oscars. Another 113 wins & 83 nominations.",
-      Runtime: "194 min",
-      Poster:
-        "https://m.media-amazon.com/images/M/MV5BMDdmZGU3NDQtY2E5My00ZTliLWIzOTUtMTY4ZGI1YjdiNjk3XkEyXkFqcGdeQXVyNTA4NzY1MzY@._V1_SX300.jpg",
-    };
-
-    return deleteMovie(peli).then((respuesta) =>
+    return deleteMovie("Titanic").then((respuesta) =>
       expect(respuesta).not.toBe(null)
     );
   });
@@ -74,19 +55,7 @@ describe("Comprueba el comportamiento de deleteMovie", () => {
 
 describe("Comprueba el comportamiento de setMovie", () => {
   test("Edita una película", () => {
-    let peli = {
-      Title: "Titanic",
-      Director: "James Cameron",
-      Year: 1997,
-      Actors: "Leonardo DiCaprio, Kate Winslet, Billy Zane, Kathy Bates",
-      Genre: "Drama, Romance",
-      Awards: "Won 11 Oscars. Another 113 wins & 83 nominations.",
-      Runtime: "194 min",
-      Poster:
-        "https://m.media-amazon.com/images/M/MV5BMDdmZGU3NDQtY2E5My00ZTliLWIzOTUtMTY4ZGI1YjdiNjk3XkEyXkFqcGdeQXVyNTA4NzY1MzY@._V1_SX300.jpg",
-    };
     let id = 2;
-
-    return setMovie(peli, id).then((respuesta) => expect(respuesta).not.toBe());
+    return setMovie(id).then((respuesta) => expect(respuesta).not.toBe());
   });
 });

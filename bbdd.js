@@ -64,7 +64,9 @@ exports.getMovie = async (nombre) => {
       WHERE Title=(?);`,
       [nombre]
     );
+
     delete res.meta;
+
     return res;
   } catch (err) {
     return null;

@@ -75,7 +75,7 @@ footer {
   margin: 0;
   display: flex;
   height: 10vh;
-  width: 100vw;
+  width: 100%;
 }
 #div {
   background-color: rgb(233, 185, 65, 0.7);

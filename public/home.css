@@ -98,7 +98,7 @@ p.enunciados {
   margin: 0;
   display: flex;
   height: 10vh;
-  width: 100vw;
+  width: 100%;
 }
 .pelifav {
   margin: 0;
